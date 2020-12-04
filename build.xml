@@ -67,6 +67,20 @@
             <classpath refid="SimpleCalculator.classpath"/>
         </junit>
     </target>
+    <target name="SimpleCalculator (1)">
+        <java classname="simpleCalc.SimpleCalculator" failonerror="true" fork="yes">
+            <classpath refid="SimpleCalculator.classpath"/>
+        </java>
+    </target>
+    <target name="SimpleCalculatorTest (1)">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="simpleCalc.SimpleCalculatorTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="SimpleCalculator.classpath"/>
+        </junit>
+    </target>
     <target name="junitreport">
         <junitreport todir="${junit.output.dir}">
             <fileset dir="${junit.output.dir}">
