@@ -1,6 +1,8 @@
-import java.util.*;
-import static org.junit.Assert.*;
-import org.junit.*;
+package simpleCalc;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
 
 public class SimpleCalculatorTest {
 	@Test
